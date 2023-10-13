@@ -1,0 +1,15 @@
+mixin input (placeholder, name, type, label)
+    +e.input__&attributes(attributes)
+        if(label)
+            +e.label.p !{label}
+        +e.parent
+            +e.INPUT.field(name=name type=type)
+            +e.SPAN.placeholder !{placeholder}
+
+mixin textarea (placeholder, name, type, label)
+    +e.input__&attributes(attributes)
+        if(label)
+            +e.label.p !{label}
+        +e.parent
+            +e.TEXTAREA.field(name=name type=type)
+            +e.SPAN.placeholder !{placeholder}

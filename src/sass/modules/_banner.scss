@@ -1,0 +1,28 @@
+.banner {
+  background-color: #EDEDED;
+  padding: 3.5rem 6rem;
+  @include large-tablet {
+    padding: 3.5rem 0;
+  }
+  @include large-mobile {
+    padding: 2rem 0;
+  }
+  &__text {
+    margin-bottom: 1.5rem;
+    a {
+      color: #0035FF;
+      text-decoration-line: underline;
+      text-decoration-skip-ink: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__bg {
+    position: relative;
+    padding-top: 200 / 660 * 100%;
+    @include large-mobile {
+      padding-top: 200 / 280 * 100%;
+    }
+  }
+}

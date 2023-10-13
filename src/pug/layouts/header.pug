@@ -1,0 +1,43 @@
+-
+    var sliderSettings = {
+        //- effect: 'fade',
+        speed: 500,
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        freeMode: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            draggable: true,
+        },
+        breakpoints: {
+            767: {
+                scrollbar: false,
+                freeMode: false,
+                slidesPerView: 4,
+            }
+        },
+    };
+
+header.header
+    .container
+        .header__top
+            h1.header__title.h1 Путь JavaScript
+        .header__inner
+            .header__bg
+                .header__slider.swiper.js-slider(data-settings=sliderSettings)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .header__slide.is-active
+                                img(src="/img/book-1.jpg" alt="Можно выделить три основных направления для прогресса JavaScript ")
+                        .swiper-slide
+                            .header__slide
+                                img(src="/img/book-2.jpg" alt="Можно выделить три основных направления для прогресса JavaScript 2")
+                        .swiper-slide
+                            .header__slide
+                                img(src="/img/book-3.jpg" alt="Можно выделить три основных направления для прогресса JavaScript 3")
+                        .swiper-slide
+                            .header__slide
+                                img(src="/img/book-4.jpg" alt="Можно выделить три основных направления для прогресса JavaScript 4")
+                .swiper-scrollbar
+            .header__info
+                | Можно выделить три основных направления для прогресса JavaScript

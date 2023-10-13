@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Главная страница';
+
+block content
+	include ../modules/article
+	include ../modules/banner
+	include ../modules/conclusion
+	include ../modules/reviews
+	include ../modules/posts

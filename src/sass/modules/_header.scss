@@ -1,0 +1,111 @@
+.header {
+  margin-top: .5rem;
+  margin-bottom: 5rem;
+  &__bg {
+    background: linear-gradient(150deg, red 0%, #ff0 17%, lime 33%, cyan 50%, blue 66%, #f0f 83%, red 100%);
+    padding: 0 2.5rem;
+    @include large-mobile {
+      padding: 0;
+      margin: 0 -2rem;
+      position: relative;
+    }
+  }
+  &__inner {
+    @include large-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  &__slider {
+    @include large-mobile {
+      padding: 0 2rem;
+    }
+  }
+  &__title {
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      flex: 1 1 auto;
+      height: 1px;
+      background-color: #DBDBDB;
+    }
+    &::before {
+      margin-right: 2rem;
+      @include large-mobile {
+        margin-right: 1.5rem;
+      }
+    }
+    &::after {
+      margin-left: 2rem;
+      @include large-mobile {
+        margin-left: 1.5rem;
+      }
+    }
+    @include large-mobile {
+      margin-bottom: 4rem;
+    }
+  }
+  &__slide {
+    position: relative;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 16rem;
+      cursor: pointer;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 .6rem .9rem .6rem;
+      border-color: transparent transparent #fff transparent;
+      bottom: 0;
+      left: 50%;
+      margin-right: -50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all linear .2s;
+      @include large-mobile {
+        display: none;
+      }
+    }
+    &.is-active {
+      &::before {
+        opacity: 1;
+      }
+    }
+    @include large-mobile {
+      justify-content: flex-start;
+    }
+  }
+
+  &__info {
+    margin-top: 2rem;
+    @include line-height(14, 18);
+    font-style: italic;
+    color: #202326;
+    @include large-mobile {
+      margin: 0 0 2.5rem;
+      max-width: 25.5rem;
+    }
+  }
+
+  .swiper-slide{
+    @include large-mobile {
+      width: fit-content;
+    }
+  }
+  .swiper-scrollbar {
+    @include min-large-mobile {
+      display: none;
+    }
+    margin-bottom: -1.5rem;
+  }
+}

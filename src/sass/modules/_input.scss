@@ -1,0 +1,54 @@
+.input {
+  &__parent {
+    position: relative;
+    &.is-focus {
+      .input {
+        &__placeholder {
+          top: .5rem;
+        }
+        &__field {
+          padding: 2.2rem 2rem .8rem;
+        }
+      }
+    }
+    &.valid {
+      .input {
+        &__field {
+          border-color: #3BC87A;
+        }
+      }
+    }
+    &.error {
+      .input {
+        &__field {
+          border-color: #FF4B3B;
+        }
+      }
+      & ~ .error {
+        font-size: 1rem;
+        color: #FF4B3B;
+        display: block;
+      }
+    }
+  }
+  &__field {
+    height: 5rem;
+    padding: .8rem 2rem;
+    border-radius: .6rem;
+    border: 1px solid #E6E6E6;
+    display: block;
+    background-color: #fff;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  &__placeholder {
+    position: absolute;
+    z-index: 1;
+    color: #777;
+    font-size: 1.4rem;
+    top: 1.4rem;
+    left: 2rem;
+    transition: all linear .2s;
+    pointer-events: none;
+  }
+}

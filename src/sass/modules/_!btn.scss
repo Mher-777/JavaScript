@@ -1,0 +1,32 @@
+.btn {
+  font-size: 1.4rem;
+  border: none;
+  background-color: #0062FF;
+  color: #fff;
+  border-radius: 0.2rem;
+  min-width: 22.5rem;
+  padding: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 4.4rem;
+  text-align: center;
+  &__back {
+    position: absolute;
+    left: -0.3rem;
+    top: -0.3rem;
+    right: -0.3rem;
+    bottom: -0.3rem;
+    border-radius: inherit;
+    overflow: hidden;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  }
+  &:hover {
+  }
+
+  &__text {
+    position: relative;
+    z-index: 4;
+  }
+}

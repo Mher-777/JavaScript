@@ -1,0 +1,14 @@
+section.reviews
+    .container
+        .reviews__top
+            h3.reviews__title.h3 Оцените статью
+            .reviews__stars.stars.js-stars(data-rateyo-star-width="2.5rem" data-rateyo-spacing="1rem" data-rateyo-full-star="0.5" data-rateyo-rated-fill="#FFB400" data-rateyo-rated-stroke="#FFB400")
+        .reviews__inner
+            h4.reviews__subtitle.h4 Добавить комментарий к книге
+            form(action="#").reviews__form
+                .reviews__fields.flex
+                    +input('Имя', 'name', 'text').reviews__field
+                    +input('E-mail', 'email', 'text').reviews__field
+                    +select('Выберите книгу', 'JavaScript ниндзя', 'Pragmatic Guide to JavaScript', 'Pro JavaScript Techniques', 'Выразительный JavaScript')
+                    +textarea('Ваш отзыв', 'desc', 'text').reviews__field.fluid
+                +btn()(type='submit').reviews__btn ОТПРАВИТЬ

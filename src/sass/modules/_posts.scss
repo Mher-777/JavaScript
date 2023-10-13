@@ -1,0 +1,26 @@
+.posts {
+  padding-top: 6rem;
+  &__top {
+    margin-bottom: 4rem;
+    @include large-mobile {
+      margin-bottom: 2rem;
+    }
+  }
+  .swiper-pagination {
+    margin-top: 2rem;
+    @include min-large-mobile {
+      display: none;
+    }
+  }
+}
+
+.post-item {
+  &__image {
+    position: relative;
+    padding-top: 226 / 226 * 100%;
+    margin-bottom: 2rem;
+    @include large-mobile {
+      padding-top: 280 / 280 * 100%;
+    }
+  }
+}

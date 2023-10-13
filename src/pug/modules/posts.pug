@@ -1,0 +1,40 @@
+-
+    var sliderSettings = {
+        //- effect: 'fade',
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: false,
+            }
+        },
+    };
+section.posts
+    .container
+        .posts__top
+            h2.posts__title.h2 Похожие посты
+        .posts__slider.swiper.js-slider(data-settings=sliderSettings)
+            .swiper-wrapper
+                .swiper-slide
+                    a(href="#").post-item.posts__item
+                        .post-item__image
+                            img(src="/img/post-1.jpg" alt="События жизненного цикла ReactJS").object-fit
+                        h3.post-item__title.h3 События жизненного цикла ReactJS
+                .swiper-slide
+                    a(href="#").post-item.posts__item
+                        .post-item__image
+                            img(src="/img/post-2.jpg" alt="CSS Grids. Полное руководство").object-fit
+                        h3.post-item__title.h3 CSS Grids. Полное руководство
+                .swiper-slide
+                    a(href="#").post-item.posts__item
+                        .post-item__image
+                            img(src="/img/post-3.jpg" alt="Асинхронность в JavaScript").object-fit
+                        h3.post-item__title.h3 Асинхронность в JavaScript
+            .swiper-pagination

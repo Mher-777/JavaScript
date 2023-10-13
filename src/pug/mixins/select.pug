@@ -1,0 +1,9 @@
+mixin select(placeholder,  ...items)
+    +e.select.select__&attributes(attributes)
+        +e.parent
+            +e.SELECT.select.js-select(data-placeholder=placeholder)
+                - var count = 0;
+                each item in items
+                    - var checked = count == 0;
+                    +e.OPTION.option(val=count) !{item}
+                    - count++;
